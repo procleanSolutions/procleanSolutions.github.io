@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Cleaning Now</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("DJ1C0_sPpeua2_xJr");
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">✨ ProClean Solutions ✨</div>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deep-clean.html">Full House Deep Clean</a></li>
+        <li><a href="weekly.html">Weekly / Bi-Weekly</a></li>
+      </ul>
+      <a href="book-now.html" class="btnBW1">
+        <h1>📅 Boock Now</h1>
+      </a>
+    </nav>
+  </header>
+  
+      <!-- Booking Form (a la derecha) -->
+      <section id="booking" class="section booking-side">
+        <h2> Book Your Cleaning Now</h2>
+        <p>Schedule your cleaning service instantly. Choose the type of service, date, and time that suits you.</p>
+
+        <form id="bookingForm" class="booking-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required pattern="^[0-9+ ]+$">
+
+          
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required>
+
+
+          <label for="service">Select Service</label>
+          <select id="service" name="service" required>
+            <option value="">-- Select a service --</option>
+            <option value="Full House Deep Clean">Full House Deep Clean</option>
+            <option value="Weekly Cleaning">Weekly Cleaning</option>
+            <option value="Bi-Weekly Cleaning">Bi-Weekly Cleaning</option>
+          </select>
+
+          <label for="giftDate">Preferred Date</label>
+          <input type="date" id="giftDate" name="date" required>
+
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="time" required>
+
+          <label for="message">Additional Notes</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+
+        <div id="bookingMessage"></div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ProClean Solutions - All rights reserved.</p>
+  </footer>
+
+  <script src="validaciones.js"></script>
+</body>
+</html>

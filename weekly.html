@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly & Bi-Weekly Packages - ProClean Solutions</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("DJ1C0_sPpeua2_xJr");
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">✨ ProClean Solutions ✨</div>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deep-clean.html">Full House Deep Clean</a></li>
+      </ul>
+      <a href="book-now.html" class="btnBW1">
+        <h1>📅 Boock Now</h1>
+      </a>
+    </nav>
+  </header>
+  
+
+<section id="weekly" class="sectionWK">
+  <h2>Weekly / Bi-Weekly Packages</h2>
+  <p class="subtitleP">Choose the plan that best suits your home</p>
+  <div class="pricing-cards">
+
+    <!-- Plan 1 -->
+    <div class="pricing-card">
+      <h3>Routine Clean</h3>
+      <p>3.5 Hours Weekly Clean</p>
+      <div class="price">€80 <span>3.5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Weekly Cleaning - €80 (4 Hours)">
+        <button type="submit" class="btn">Select</button>
+      </form>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="pricing-card highlight">
+      <h3>Routine Clean</h3>
+      <p>4.5 Bi-Weekly (Fortnightly) Clean</p>
+      <div class="price">€90 <span>4.5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Bi-Weekly Cleaning - €90 (4.5 Hours)">
+        <button type="submit" class="btn">Select</button>
+      </form>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="pricing-card">
+      <h3>Routine Clean</h3>
+      <p>5 Monthly Clean</p>
+      <div class="price">€100 <span>5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Monthly Cleaning - €100 (5 Hours)">
+        <button type="submit" class="btn">Select</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <h2>📞 Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required pattern="^[0-9+ ]+$">
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="service">Service Requested</label>
+      <input type="text" id="service" name="service" readonly>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="message">Message</label>
+
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div id="formMessage"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ProClean Solutions - All rights reserved.</p>
+  </footer>
+
+  <script src="validaciones.js"></script>
+</body>
+</html>

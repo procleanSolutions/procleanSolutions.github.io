@@ -1,0 +1,1006 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #ececec; /* Blanco humo */
+  color: #1A2E40; /* Gris piedra */
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #1A2E40; /* Azul medianoche */
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h3{
+  color: #1A2E40;
+}
+
+p{
+  padding: px;
+}
+
+
+
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Links en escritorio */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #00c3ff;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* aparece el botón */
+  }
+
+  .nav-links {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    background-color: #0e2a47;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* cuando está activo, aparece */
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.8rem;
+    width: 100%;
+  }
+}
+
+
+.hero {
+  position: relative;
+  height: 100vh; /* Pantalla completa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background-color: #335c83;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* overlay oscuro */
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  
+}
+
+.hero p {
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+
+/* Efecto hover en fondo */
+.hero:hover {
+  transition: background-size 3s ease;
+}
+
+/* Ajuste Weekly */
+#weekly h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem; /* más espacio con las cards */
+}
+
+.btnBW{
+  margin-left: 100px;
+  display: inline-block;
+  background: #7bf76b; /* Turquesa */
+  font-weight: bold;
+  padding: 0.2rem 01.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btnBW h1{
+  font-size: 13px;
+  color: #1A2E40;
+}
+
+.btnBW:hover {
+  background: #538bc0; /* Verde suave */
+  transform: translateY(1px);
+}
+
+.btnBW1{
+  margin-left: 100px;
+  display: inline-block;
+  background: #7bf76b; /* Turquesa */
+  font-weight: bold;
+  padding: 0.2rem 01.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.service-description{
+  margin-top: 30px;
+  text-align: center;
+}
+.btnBW1 h1{
+  font-size: 13px;
+  color: #1A2E40;
+}
+
+.btnBW1:hover {
+  background: #538bc0; /* Verde suave */
+  transform: translateY(1px);
+}
+
+
+
+.btn {
+  display: inline-block;
+  background: #7bf76b; /* Turquesa */
+  color: #1A2E40;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #538bc0; /* Verde suave */
+  transform: translateY(-3px);
+}
+
+/* Secciones */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+hr{
+  background-color: #000;
+  border: none;
+  height: 2px;
+}
+
+/* --- ABOUT US --- */
+.section1 {
+  background-color: #1A2E40;
+  text-align: center;
+  padding: 7%;
+}
+
+.section1 h2 {
+  font-size: 40px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.section1 p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.section1 h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 25px 0 15px 0;
+}
+
+.about-values {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px auto;
+  max-width: 700px;
+  text-align: left; /* que alinee en bloque */
+}
+
+.about-values li {
+  display: flex;              /* usamos flexbox */
+  align-items: center;        /* centramos verticalmente */
+  justify-content: center;    /* que todo el contenido quede centrado en el bloque */
+  font-size: 18px;
+  color: #ddd;
+  margin: 10px 0;
+  gap: 10px;                  /* espacio entre el tick y el texto */
+}
+
+.about-values li::before {
+  content: "✔️"; /* icono para cada valor */
+  font-size: 18px;
+  flex-shrink: 0;             /* que no se encoja */
+}
+
+
+
+
+
+.section2{
+  background-size: 45%;
+}
+
+.section h2 {
+  text-align: center;
+  color: #1A2E40;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  font-size: 40px;
+
+}
+
+.section3{
+  background-color: #e6e6e6;
+  background: url('');
+  text-align: center;
+  padding: 5%;
+
+}
+
+
+.section3 h2{
+  color: #1A2E40;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  font-size: 40px;
+  padding: 30px;
+}
+
+.section3 p{
+  color: #1A2E40;
+  padding: 2%;
+}
+
+
+
+.section4{
+  background-color: #FAFAFA;
+  padding: 30px;
+}
+
+.section4 h2{
+  color: #1A2E40;
+  text-align: left;
+}
+
+
+/* Servicios */
+#services {
+  padding: 8rem 6rem;
+  max-width: 1400px;   /* más ancho */
+  margin: auto;        /* centrado */
+}
+
+
+.contact p{
+  color: #1A2E40;
+  font-size: 20px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* antes 400px */
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.service-card {
+  background: #fff;
+  padding: 2.5rem; /* más espacio interno */
+  border-radius: 14px;
+  border: 1px solid #1A2E40;
+  text-align: center;
+  font-size: 1.1rem; /* texto un poco más grande */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.76);
+}
+
+.service-description h3{
+  padding: 20px;
+  font-size: 20px;
+}
+
+.service-description h4{
+  font-size: 15px;
+}
+
+
+
+.btnN{
+  align-items: center;
+  background: #538bc0; /* Turquesa */
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.btnN:hover {
+  background: #25D366; /* Verde suave */
+  transform: translateY(-3px);
+}
+
+
+.booking-form {
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+  margin: 2rem auto;
+}
+
+.booking-form label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  width: fit-content;
+  align-self: center;
+}
+
+
+
+
+
+
+/* Reviews */
+blockquote {
+  background: #e9e7e7;
+  border-left: 5px solid #8feb83;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact{
+    text-align: center;
+}    
+    
+
+.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.email {
+  background: #40E0D0;
+  color: #1A2E40;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  color: #1A2E40;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #1A2E40;
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  margin: 5px 0;
+  color: #6E7C7C;
+}
+
+/* Tarjetas de precios */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 10px;
+  
+  
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 50px;
+  padding: 2rem; /* cambie de 90px a 2rem para que no se deforme */
+  text-align: center;
+  font-size: large;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.842);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #1A2E40;
+  background: url('https://us.123rf.com/450wm/nevodka/nevodka1905/nevodka190500041/122268596-art%C3%ADculos-de-limpieza-surtido-de-productos-de-servicio-limpio.jpg?ver=6') no-repeat center/cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subtitle{
+  text-align: center;
+  padding: 30px;
+  margin-top: -50px;
+  font-size: 20px;
+  color: #1A2E40;
+}
+
+
+
+
+
+
+.btnP {
+  align-self: center; /* centrado dentro de la card */
+  background: #7bf76b; 
+  color: #1A2E40;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btnP:hover {
+  background: #538bc0; /* tono un poco más oscuro al pasar */
+  transform: translateY(-3px); /* efecto "flotar" */
+}
+
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.815);
+}
+
+
+
+.section3 h3{
+  color: #1A2E40;
+}
+
+.section3 span{
+  font-size: 40px;
+}
+
+.section3 p{
+  font-size: 30px;
+}
+
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1A2E40;
+  margin: 1rem 0;
+}
+
+.price span {
+  display: block;
+  font-size: 0.9rem;
+  color: #6E7C7C;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.pricing-card ul li {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+
+select#additionalServices {
+  font-family: inherit;
+  background: #fff;
+  border: 1px solid #1A2E40;
+  border-radius: 30px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  color: #1A2E40;
+  transition: box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+select#additionalServices:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(58, 135, 173, 0.5);
+}
+
+
+/* --- DONATION PROGRAM --- */
+.donation-section {
+  background-color: #1A2E40;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.donation-section h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.donation-section h3 {
+  font-size: 22px;
+  color: #fff;
+  margin: 25px 0 15px 0;
+}
+
+.donation-section p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center; /* centramos párrafos */
+}
+
+/* ✅ Lista estilo About Us */
+.donation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px auto;
+  max-width: 700px;
+  text-align: left; /* alineamos la lista en bloque */
+}
+
+.donation-list li {
+  display: flex;              /* usamos flexbox */
+  align-items: center;        /* centramos verticalmente */
+  justify-content: center;    /* centramos el bloque dentro */
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0;
+  gap: 10px;                  /* espacio entre tick y texto */
+  margin-top: 5px;
+}
+
+.donation-list li::before {
+  content: "✔️"; /* icono al inicio */
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+
+
+/* -------------------------------
+   Gift Cards Section
+---------------------------------*/
+.giftcards {
+  padding: 4rem 2rem;
+  background-color: #1A2E40;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.giftcards h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.giftcards h5{
+  color: white;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.giftcards p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.giftcards-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  cursor: default; /* Evita que se tome como link */
+}
+
+
+/* List with ticks */
+.giftcards ul.gift-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.giftcards ul.gift-list li {
+  position: relative;
+  padding-left: 2rem; /* espacio para tick */
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.giftcards ul.gift-list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: #2e7d32;
+}
+
+/* Grid layout for images + form */
+.giftcards-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.giftcards-img,
+.giftcards-form {
+  flex: 1 1 400px;
+}
+
+/* Images styling */
+.giftcards-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Hover effect */
+.giftcards-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Form styling */
+.giftcards-form {
+  text-align: left;
+  background-color: #e6e6e6;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.giftcards-form h3 {
+  margin-bottom: 1rem;
+  color: #1A2E40;
+  text-align: center;
+}
+
+.giftcards-form label {
+  display: block;
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.giftcards-form input,
+.giftcards-form select,
+.giftcards-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.giftcards-form button {
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.giftcards-form button:hover {
+  background-color: #1A2E40;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .giftcards-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .giftcards-img img {
+    height: 250px;
+  }
+}
+
+
+
+
+/* --- Tabla Deep Cleaning --- */
+.deep-clean-table {
+  margin: 0 auto; /* centra la tabla */
+  border-collapse: collapse; /* une bordes */
+  width: 80%; /* opcional: que no ocupe toda la pantalla */
+}
+
+.deep-clean-table th,
+.deep-clean-table td {
+  border: 1px solid #1A2E40; /* líneas visibles */
+  padding: 12px;
+  text-align: center;
+}
+
+.deep-clean-table th {
+  background-color: #1A2E40;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* --- Lista sin puntos y en negrita --- */
+.service-description ul {
+  list-style: none; /* quita los puntos */
+  padding: 0;
+  margin: 0;
+  font-weight: bold; /* texto en negrita */
+}
+
+.service-description li {
+  margin: 8px 0;
+}
+
+.terms {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  line-height: 1.7;
+  color: #1A2E40;
+}
+
+.terms h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1A2E40;
+}
+
+.terms h3 {
+  margin-top: 1.5rem;
+  color: #6E7C7C;
+}
+
+
+
+.select-service-btn{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #538bc0;
+  color: rgb(255, 255, 255);
+
+}
+
+.select-service-btn:hover{
+  background: #1A2E40;
+  color: #fff;
+  transform: translateY(-2px);
+  transition: background 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+/* Contenedor centrado */
+#donate-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Botón PayPal siempre visible */
+#donate-button {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s, pointer-events 0.3s;
+}
+
+/* Estado deshabilitado (no clickeable) */
+#donate-button.disabled {
+  opacity: 0.5;              /* se ve apagado */
+  pointer-events: none;       /* no permite clics */
+  cursor: not-allowed;        /* cambia cursor */
+}
+
+
+ .pp-V98DAGM7L4TRY{
+  text-align:center;
+  border:none;
+  border-radius:1.5rem;
+  min-width:11.625rem;
+  padding:0 2rem;
+  height:2.625rem;
+  font-weight:bold;
+  background-color:#96d5fd;
+  color:#000000;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:1rem;
+  line-height:1.25rem;
+  cursor:pointer;
+  margin-top: 20px;}
+
+
+
+  /* FIX para móviles */
+@media (max-width: 768px) {
+
+  /* Centrar contenedores */
+  .section-container,
+  .card,
+  .service-card,
+  .additional-services,
+  .services-section {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Títulos grandes como “Our Services” */
+  h1, .title-large {
+    font-size: 2rem !important;
+    text-align: center !important;
+    line-height: 2.3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Ajuste del texto “Additional Services” */
+  .additional-title {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+
+  /* Select centrado */
+  select,
+  .custom-select {
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Botón debajo del select */
+  .select-btn {
+    width: 100% !important;
+    margin-top: 1rem !important;
+    display: block !important;
+  }
+
+  /* Tarjetas de servicios */
+  .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+

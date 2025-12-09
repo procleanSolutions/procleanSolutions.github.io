@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProClean Solutions - Cleaning Services in Limerick</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("DJ1C0_sPpeua2_xJr"); // 👉 Reemplazar con tu Public Key de EmailJS
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">✨ ProClean Solutions ✨</div>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+  
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Prices List</a></li>
+        <li><a href="#gift-card">Gift Cards</a></li>
+        <li><a href="#donation">Donation Program</a></li>
+        <li><a href="#terms">Term & Conditions</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        
+        <a href="book-now.html" class="btnBW">
+          <h1>📅 Boock Now</h1>
+        </a>
+    </nav>
+  </header>
+
+
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1> Professional House Cleaning Services in Limerick </h1>
+    <p>Reliable, detailed, and affordable cleaning for your home and office.</p>
+    <a href="#services" class="btn">👉🏼 Book Your Cleaning Today</a>
+  </section>
+
+    <!-- About Us -->
+  <section class="section1" id="about">
+    <h2>About Us</h2>
+    <p>
+      We are a young and committed cleaning company based in Ireland, with 2 years of experience providing reliable and professional cleaning services. 
+      Our mission is to create clean, safe, and welcoming spaces for our clients, whether at home, in offices, or in industrial facilities.
+    </p>
+    <p>
+      What makes us different is our attention to detail, flexibility, and dedication to every job we take on. We understand that every client has unique needs, 
+      so we adapt our services to deliver the best possible results.
+    </p>
+
+    <h3>Our values are based on:</h3>
+    <ul class="about-values">
+      <li><strong>Trust</strong> – building long-term relationships with our clients.</li>
+      <li><strong>Quality</strong> – delivering excellent service every time.</li>
+      <li><strong>Responsibility</strong> – using safe products and respecting the environment.</li>
+    </ul>
+
+    <p>
+      In just two years, we have earned the trust of many satisfied clients, and we continue to grow thanks to our hard work and commitment.
+    </p>
+    <p>
+      We believe that a clean environment is the key to comfort, productivity, and wellbeing. That is why we put our heart into everything we do.
+    </p>
+  </section>
+
+<hr>    
+
+  <section class="section2" id="services-booking">
+    <div class="services-booking-grid">
+      
+      <!-- Services -->
+      <section id="services" class="section services">
+        <h2> Our Services</h2>
+        <div class="service-list">
+          <!-- FULL HOUSE DEEP CLEAN -->
+          <div class="service-card">
+            <h3>🏠 Full House Deep Clean</h3>
+            <p>Thorough cleaning for the entire home. Ideal for seasonal refresh or move-in/out.</p>
+            <a href="deep-clean.html" class="btn">View Packages</a>
+          </div>
+
+          <!-- WEEKLY / BI-WEEKLY -->
+          <div class="service-card">
+            <h3>📅 Weekly / Bi-Weekly Packages</h3>
+            <p>Maintain your home clean and fresh with regular cleaning schedules.</p>
+            <a href="weekly.html" class="btn">View Packages</a>
+          </div>
+        </div>
+        <!-- Additional Services Dropdown -->
+        <div style="text-align: center; margin-top: 3rem;">
+          <h3 style="color: #1A2E40; margin-bottom: 1rem;">🧼 Additional Services</h3>
+
+          <select id="additionalServices" name="additionalServices"
+            style="padding: 0.8rem 1.2rem; border-radius: 30px; border: 1px solid #1A2E40; font-size: 1rem; margin-bottom: 1rem;">
+            <option value="">Select a service</option>
+            <option value="Inside Oven Cleaning (€25)">Inside Oven Cleaning (€25)</option>
+            <option value="Outside Windows Cleaning (€5/window)">Outside Windows Cleaning (€5/window)</option>
+            <option value="Inside Kitchen Cabinets (€20)">Inside Kitchen Cabinets (€20)</option>
+            <option value="Deep Bathroom Cleaning (€30)">Deep Bathroom Cleaning (€30)</option>
+          </select>
+
+          <br>
+
+          <button id="additionalServiceBtn" class="btnN">Select Service</button>
+        </div>
+      </section>
+
+  <!-- Pricing -->
+<section id="pricing" class="section3">
+  <h2>Price List</h2>
+  <p class="subtitle">Choose the plan that best suits your home</p>
+  <div class="pricing-cards">
+
+    <!-- Plan 1 -->
+    <div class="pricing-card">
+      <h3>Routine Clean</h3>
+      <p>3.5 Hours Weekly Clean</p>
+      <div class="price">€80 <span>3.5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Weekly Cleaning - €80 (4 Hours)">
+        <button type="submit" class="btnP">Select</button>
+      </form>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="pricing-card highlight">
+      <h3>Routine Clean</h3>
+      <p>4.5 Bi-Weekly (Fortnightly) Clean</p>
+      <div class="price">€90 <span>4.5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Bi-Weekly Cleaning - €90 (4.5 Hours)">
+        <button type="submit" class="btnP">Select</button>
+      </form>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="pricing-card">
+      <h3>Routine Clean</h3>
+      <p>5 Monthly Clean</p>
+      <div class="price">€100 <span>5 Hours</span></div>
+      <ul>
+        <li>Empty Trash Can(s)</li>
+        <li>Sweep & Mop Floors</li>
+        <li>Clean Interior Glass</li>
+        <li>Vacuum Couch & Chairs</li>
+        <li>Interior Window Cleaning</li>
+      </ul>
+      <form class="weeklyForm">
+        <input type="hidden" name="weekly" value="Monthly Cleaning - €100 (5 Hours)">
+        <button type="submit" class="btnP">Select</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Gift Cards -->
+<section id="giftcards" class="section giftcards">
+  <h2>🎁 Gift Cards</h2>
+  <p>
+    Looking for a unique and practical gift?  
+    Now you can surprise someone with a professional cleaning service through our gift cards.
+  </p>
+  <p>Perfect for:</p>
+  <ul class="gift-list">
+    <li>Family or friends who could use a little help.</li>
+    <li>Elderly people who will appreciate a clean and safe home.</li>
+    <li>Couples or new parents who need more time to rest.</li>
+    <li>Special occasions like birthdays, anniversaries, or celebrations.</li>
+  </ul>
+
+  <p>
+    👉 You choose the amount or type of service, and we take care of the rest.
+  </p>
+
+  <div class="giftcards-grid" id="gift-card">
+    <!-- Imagen -->
+    <div class="giftcards-img">
+      <img src="https://static.vecteezy.com/system/resources/previews/030/668/181/large_2x/gift-high-quality-4k-ultra-hd-hdr-free-photo.jpg" alt="Gift image">
+      <img src="https://t3.ftcdn.net/jpg/08/56/06/30/360_F_856063005_XXe0YLm5O0wyweGvLkKxDqiLN7yxUFx8.jpg" alt="Happy people">
+      <img src="https://static.vecteezy.com/system/resources/previews/030/668/173/non_2x/gift-high-quality-4k-ultra-hd-hdr-free-photo.jpg">
+      <h5>Impress someone with a ⭐ProCleanSolutions⭐ gift card</h5>
+    </div>
+    
+
+    <!-- Booking Form -->
+    <div class="giftcards-form">
+      <h3>📅 Book a Gift Card</h3>
+      <form id="bookingFormGift" class="booking-form">
+        <label for="giftName">Full Name</label>
+        <input type="text" id="giftName" name="name" required>
+
+        <label for="giftEmail">Email</label>
+        <input type="email" id="giftEmail" name="email" required>
+
+        <label for="giftPhone">Phone</label>
+        <input type="tel" id="giftPhone" name="phone" required pattern="^[0-9+ ]+$">
+
+        <label for="giftService">Gift Card Type</label>
+        <select id="giftService" name="service" required>
+          <option value="">-- Select a service gift card --</option>
+          <option value="Full House Deep Clean">Gift Card - Full House - Deep Clean</option>
+          <option value="Weekly Cleaning">Gift Card - Weekly Cleaning</option>
+          <option value="Bi-Weekly Cleaning">Gift Card - Bi-Weekly Cleaning</option>
+          <option value="Monthly Cleaning">Gift Card - Monthly Cleaning</option>
+          <option value="Additional Services - Inside Oven Cleaning">Gift Card - Inside Oven Cleaning</option>
+          <option value="Additional Services - Outside Windows Cleaning">Gift Card - Outside Windows Cleaning</option>
+          <option value="Additional Services - Inside Kitchen Cabinets">Gift Card - Inside Kitchen Cabinets</option>
+          <option value="Additional Services - Deep Bathroom Cleaning">Gift Card - Deep Bathroom Cleaning</option>
+        </select>
+
+        <label for="giftDate">Preferred Date</label>
+        <input type="date" id="giftDate" name="date" required>
+
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="giftAddress" name="address" required>
+
+
+
+
+        <label for="giftMessage">Message for the Recipient</label>
+        <textarea id="giftMessage" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn">Confirm Gift</button>
+      </form>
+      <div id="giftBookingMessage"></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <h2>📞 Contact Us</h2>
+    <p>📍 Based in Limerick, serving all surrounding areas</p>
+    <p>📞 Phone: +353899695197
+    </p>
+    <div class="contact-links">
+      <a class="btn whatsapp" href="https://wa.me/353899695197" target="_blank">WhatsApp</a>
+    </div>
+
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required pattern="^[0-9+ ]+$">
+      
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="service">Service Requested</label>
+      <input type="text" id="service" name="service" readonly>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div id="formMessage"></div>
+  </section>
+
+
+<!-- ===== DONATION SECTION ===== -->
+<section id="donation" class="donation-section">
+  <h2>💙 Donation Program</h2>
+  <p>
+    At our company, we believe that cleaning is not just a service — it’s also a way to care for and support those who need it most.
+    Thanks to donations from our clients and partners, we can offer free home cleaning services to people going through difficult times.
+  </p>
+
+  <h3>This support is especially aimed at:</h3>
+  <ul class="donation-list">
+    <li>Elderly people who can no longer clean by themselves.</li>
+    <li>People with disabilities who need extra help at home.</li>
+    <li>Families or individuals with illnesses that prevent them from maintaining their living space.</li>
+  </ul>
+
+  <p>
+    Every contribution, no matter how small, is transformed into free cleaning hours for those who truly need them.
+  </p>
+
+  <h3>👉 How you can help:</h3>
+  <ul class="donation-list">
+    <li>Make a direct donation through our website.</li>
+    <li>Sponsor a full cleaning service for a person or family in need.</li>
+    <li>Spread the word and help us reach more people.</li>
+  </ul>
+
+  <div>
+    <form action="https://www.paypal.com/ncp/payment/V98DAGM7L4TRY" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+      <input class="pp-V98DAGM7L4TRY" type="submit" value="Donate 💜" />
+      <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+      <section style="font-size: 0.75rem; color: white; display: flex; align-items: center; gap: 0.25rem;">
+        <span style="color: white;">Technology of</span>
+        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" 
+            alt="paypal" 
+            style="height:0.875rem; vertical-align:middle; filter: brightness(0) invert(1);"/>
+      </section>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Reviews -->
+  <section id="reviews" class="section4">
+    <h2>⭐ Customer Reviews</h2>
+    <blockquote>
+      “ProClean Solutions did an amazing job in my apartment – everything was spotless! Highly recommended.”  
+      <span>– Sarah, Limerick</span>
+    </blockquote>
+    <blockquote>
+      “Very reliable and professional. Great attention to detail.”  
+      <span>– John, Castletroy</span>
+    </blockquote>
+  </section>
+
+
+<!-- Terms and Conditions -->
+  <section id="terms" class="section terms">
+      <h2>📑 Terms and Conditions – ProClean Solutions</h2>
+      <p><em>Last updated: 05/09/2025</em></p>
+
+      <h3>1. Introduction</h3>
+      <p>These Terms and Conditions govern the use of cleaning services offered by ProClean Solutions in Ireland. By contracting our services, you agree to the conditions described below.</p>
+
+      <h3>2. Services</h3>
+      <p>Cleaning services will be provided as previously agreed (homes, offices, commercial premises, etc.). Any additional services must be requested in advance and may incur an additional charge. ProClean Solutions reserves the right to refuse services in cases of risk to staff safety or unsuitable conditions.</p>
+
+      <h3>3. Reservations and Cancellations</h3>
+      <p>To confirm any service, a payment of €20 is required per reservation made. This payment will be deducted from the final price of the service. In the event of cancellation with less than 24 hours' notice, the €20 payment will not be refunded. If the client fails to show up or grant access to the property on the agreed date and time, the full charge for the reserved service will apply.</p>
+
+      <h3>4. Access to the Property</h3>
+      <p>The client is responsible for ensuring secure access to the property on the agreed date and time. ProClean Solutions staff is not responsible for improperly shared keys, codes, or access.</p>
+
+      <h3>5. Payments</h3>
+      <p>In addition to the €20 reservation fee, the remaining balance of the service must be paid at the time of service or as agreed upon in the contract. We accept cash, transfer, or card (as applicable). Prices may be subject to change with prior notice.</p>
+
+      <h3>6. Liability</h3>
+      <p>ProClean Solutions has trained and insured personnel to provide the service. We are not responsible for valuables that have not been previously secured by the client. In the event of damage caused by our staff, this must be reported within 24 hours of the service being provided.</p>
+
+      <h3>7. Health and Safety</h3>
+      <p>We use safe and, where possible, environmentally friendly cleaning products. The client must inform us of any special conditions (allergies, delicate surfaces, fragile materials, etc.).</p>
+
+      <h3>8. Modifications to the Terms</h3>
+      <p>ProClean Solutions reserves the right to update these Terms and Conditions at any time. Updated versions will be available on our website.</p>
+
+      <h3>9. Contact</h3>
+      <p>
+        For questions related to these Terms and Conditions, you can contact us at:<br>
+        📧 <a href="mailto:procleanireland2025@gmail.com">procleanireland2025@gmail.com</a><br>
+        📞 +353899695197
+      </p>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ProClean Solutions - All rights reserved.</p>
+  </footer>
+
+  <script src="validaciones.js"></script>
+</body>
+</html>
